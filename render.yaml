@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: meta-whatsapp-webhook
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node app.js
+    autoDeploy: true
+    envVars:
+      - key: VERIFY_TOKEN
+        sync: false
